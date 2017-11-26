@@ -10,6 +10,10 @@ import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
 
+/**
+ * @ author: iutinvg
+ * @ revised by Mars
+ */
 public class Compass implements SensorEventListener {
 	private static final String TAG = "Compass";
 

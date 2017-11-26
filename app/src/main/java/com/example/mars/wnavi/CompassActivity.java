@@ -20,7 +20,10 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 
-
+/**
+ * @ author: iutinvg
+ * @ revised by Mars
+ */
 public class CompassActivity extends AppCompatActivity {
     final int MY_PERMISSIONS_REQUEST_READ_CONTACTS = 1;
     private FusedLocationProviderClient mFusedLocationClient;
