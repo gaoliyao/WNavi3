@@ -53,7 +53,6 @@ public class Compass implements SensorEventListener {
 			return;
 		}
 		float angle = azimuth + directionAngle;
-		directionAngle = 0;
 		Log.i(TAG, "will set rotation from " + currectAzimuth + " to "
 				+ angle);
 

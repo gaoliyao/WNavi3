@@ -9,6 +9,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -36,6 +37,7 @@ public class CompassActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_compass);
 
+        final TextView tv = (TextView) findViewById(R.id.tv);
         compass = new Compass(this);
         final Location[] lastLocation = {null};
         final Place[] desPlace = {null};
@@ -52,6 +54,7 @@ public class CompassActivity extends AppCompatActivity {
             public void onSuccess(Location location) {
                 Log.e("LOCATION: ", location.toString());
                 lastLocation[0] = location;
+                tv.setText(location.toString());
                 if (desPlace[0] != null){
                     float dirAngle = getAngle(desPlace[0], lastLocation[0]);
                     compass.directionAngle = dirAngle;
@@ -85,7 +88,6 @@ public class CompassActivity extends AppCompatActivity {
                 if (lastLocation[0] != null) {
                     float dirAngle = getAngle(place, lastLocation[0]);
                     compass.directionAngle = dirAngle;
-
                     Log.e("ANGLE", Float.toString(dirAngle));
                     placeDetailsStr += Double.toString(dirAngle);
                 }
@@ -126,8 +128,11 @@ public class CompassActivity extends AppCompatActivity {
         else
             inRads = 2 * Math.PI - inRads;
 
-        float result = (float)(360 - Math.toDegrees(inRads));
-        return result;
+        float angle1 = (float)(Math.toDegrees(inRads));
+        angle1 = 360 - angle1;
+        angle1 -= 90;
+
+        return angle1;
 
     }
     @Override
