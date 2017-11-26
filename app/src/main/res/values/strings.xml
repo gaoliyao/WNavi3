@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WNavi</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="compass_dial">Compass Dial</string>
+    <string name="compass_hands">Compass Hands</string>
+</resources>
