@@ -64,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
                 lastLocation[0] = location;
                 if (location != null) {
                     Log.e("LOCATION: ", location.toString());
+                    final TextView distance = (TextView) findViewById(R.id.textView);
+                    //distance.setText();
                 }
             }
         });

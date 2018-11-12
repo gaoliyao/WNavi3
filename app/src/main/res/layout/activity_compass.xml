@@ -11,25 +11,42 @@
         android:layout_height="wrap_content"
         android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
         />
-    <ImageView
-        android:id="@+id/main_image_dial"
-        android:layout_width="320dp"
-        android:layout_height="320dp"
-        android:layout_centerInParent="true"
-        android:contentDescription="@string/compass_dial"
-        android:src="@drawable/dial" />
 
     <ImageView
         android:id="@+id/main_image_hands"
         android:layout_width="20dp"
-        android:layout_height="240dp"
+        android:layout_height="204dp"
         android:layout_centerInParent="true"
         android:contentDescription="@string/compass_hands"
         android:scaleType="fitXY"
         android:src="@drawable/hands" />
+
     <TextView
+        android:id="@+id/tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tv"/>
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="115dp"
+        android:layout_marginStart="51dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="101dp"
+        android:text="|" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="78dp"
+        android:layout_marginStart="52dp"
+        android:text="Distance: " />
 
 </RelativeLayout>
